@@ -1,0 +1,60 @@
+/* Custom Styles overriding or extending Tailwind */
+
+:root {
+    --brand-gold: #D4AF37;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Navbar Scroll State */
+nav.scrolled {
+    background-color: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Map Filter for Dark Mode consistency */
+iframe {
+    filter: invert(90%) hue-rotate(180deg) contrast(90%);
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--brand-gold);
+    color: #000;
+}
